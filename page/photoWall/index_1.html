@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: #b8e6b3;
+			}
+			#content{
+				width: 1190px;
+				margin: 100px auto;
+				display: flex;					/*弹性布局*/
+				flex-wrap: wrap;				/*让里面的子元素换行*/
+				justify-content: space-between;	/*水平方向的排列形式*/
+				
+				transform-style: preserve-3d;	/*把盒子变成一个3d空间*/
+				transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+			}
+			.box{
+				width: 150px;
+				height: 150px;
+				position: relative;
+				margin: 12px 0;
+				
+				transform-style: preserve-3d;	/*把盒子变成一个3d空间*/
+				transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+				transition: 0.5s;
+			}
+			.box:hover{
+				transform: perspective(1000px) rotateX(0deg) rotateY(180deg);
+			}
+			.box div{
+				width: 150px;
+				height: 150px;
+				border: 10px solid #fff;
+				overflow: hidden;
+				
+				position: absolute;
+				left: 0;
+				top: 0;
+				box-sizing: border-box;
+			}
+			
+			.box:nth-child(1n) div{
+				background: #f0f0f0 url(images/1.png) no-repeat center;
+			}
+			.box:nth-child(2n) div{
+				background: #f0f0f0 url(images/2.png) no-repeat center;
+			}
+			.box:nth-child(3n) div{
+				background: #f0f0f0 url(images/3.png) no-repeat center;
+			}
+			
+			.box div:nth-of-type(1){
+				transform: translateZ(75px);
+			}
+			.box div:nth-of-type(2){
+				transform: translateZ(-75px);
+			}
+			.box div:nth-of-type(3){
+				transform: rotateX(90deg) translateZ(75px);
+			}
+			.box div:nth-of-type(4){
+				transform: rotateX(90deg) translateZ(-75px);
+			}
+			.box div:nth-of-type(5){
+				transform: rotateY(90deg) translateZ(75px);
+			}
+			.box div:nth-of-type(6){
+				transform: rotateY(90deg) translateZ(-75px);
+			}
+			
+			
+			.box span{
+				display: block;
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				right: -35px;
+				bottom: -35px;
+				border-radius: 50%;
+				text-indent: 9%;
+				line-height: 45px;
+				text-align: left;
+				font-size: 18px;
+				font-family:"微软雅黑";
+				color: #fff;
+			}
+			.box:nth-child(1n) span{
+				background: #f8af8d;
+			}
+			.box:nth-child(2n) span{
+				background: #f8d18d;
+			}
+			.box:nth-child(3n) span{
+				background: #8df88d;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="box">
+				<div><span>1</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>2</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>3</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>4</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>5</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>6</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>7</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>8</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>9</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>10</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>11</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>12</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>13</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>14</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>15</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>16</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>17</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>18</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>19</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>20</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>21</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>22</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>23</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>24</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>25</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>26</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>27</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div><span>28</span></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

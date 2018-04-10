@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #000000;
+			}
+			
+			.number {
+				perspective: 5000px;
+			}
+			
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				transform-style: preserve-3d;
+				animation: 12s move linear infinite normal;
+			}
+			
+			@keyframes move {
+				100% {
+					transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+				}
+			}
+			
+			ul li {
+				width: 100%;
+				height: 100%;
+				border: 2px solid #19dccc;
+				box-shadow: 0px 0px 80px #19dccc;
+				font: 50px/200px "微软雅黑";
+				color: #fff;
+				text-align: center;
+				position: absolute;
+			}
+			
+			li:nth-child(1) {
+				transform: rotateX(0deg) translateZ(-100px);
+			}
+			
+			li:nth-child(2) {
+				transform: rotateX(0deg) translateZ(100px);
+			}
+			
+			li:nth-child(3) {
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			
+			li:nth-child(4) {
+				transform: rotateY(90deg) translateZ(-100px);
+			}
+			
+			li:nth-child(5) {
+				transform: rotateX(90deg) translateZ(-100px);
+			}
+			
+			li:nth-child(6) {
+				transform: rotateX(90deg) translateZ(100px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="number">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
