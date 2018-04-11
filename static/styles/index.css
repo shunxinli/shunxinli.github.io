@@ -59,11 +59,15 @@ html {
 .info:hover{
     box-shadow: 0 0 10px red;
 }
+.info:hover img{
+    transform: scale(1.1)
+}
 .info  img{
     display: block;
     width: 85%;
     height: 164px;
     margin: 0 auto;
+    transition: all 1s;
 }
 .info p{
     font-size: 1.6rem;
